@@ -26,7 +26,7 @@
 
         <div id="game-frame" style="cursor: pointer; position: absolute; margin: 0 auto; opacity: 1; background: #1a1c2c; width: 100%; height: 100%;">
             <div style="text-align: center; color: white; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
-                <p style="margin: 0;">- Click To Start -</p>
+                <p style="margin: 0;">- Click To Run -</p>
             </div>
 
         </div> 
@@ -46,16 +46,15 @@
         var Module = {canvas: document.getElementById('canvas')}
 
         const gameFrame = document.getElementById('game-frame')
-
-        let scriptTag = document.createElement('script'), // create a script tag
-        firstScriptTag = document.getElementsByTagName('script')[0]; // find the first script tag in the document
-        scriptTag.src = 'tic80.js'; // set the source of the script to your script
-        firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag); // append the script to the DOM
-        this.remove()
-
+        
         gameFrame.addEventListener('click', function() {
-           
+            let scriptTag = document.createElement('script'), // create a script tag
+            firstScriptTag = document.getElementsByTagName('script')[0]; // find the first script tag in the document
+            scriptTag.src = 'tic80.js'; // set the source of the script to your script
+            firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag); // append the script to the DOM
+        this.remove()
         });
+
     </script>
 </body>
 </html>
